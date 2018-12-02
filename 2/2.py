@@ -1,4 +1,6 @@
 from itertools import groupby 
+import difflib
+
 
 inlist = []
 for line in open("input.txt"):
@@ -34,3 +36,19 @@ for k,v in diclist.iteritems():
 
 
 print "part one solution %d" % (count2*count3)
+
+
+#start of part 2
+
+
+for i,s in enumerate(difflib.ndiff("abcde", "abcdf")):
+    print i
+    print s
+
+
+exit()
+
+for x in inlist:
+    for y in inlist:
+        diff= difflib.ndiff(x,y)
+        print ''.join(diff)
