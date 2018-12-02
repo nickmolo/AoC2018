@@ -22,7 +22,7 @@ for x in range(200):
             print freq_list.get(count)
             print count
             print i
-            break
+            exit()
             #else:
             #    freq_list[count] = freq_list[count]+1
 
